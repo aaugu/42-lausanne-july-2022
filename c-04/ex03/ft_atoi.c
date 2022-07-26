@@ -1,10 +1,6 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-int		ft_checkoperators(char *str, int i, int minus);
-int		ft_result(char *str, int i, int j);
-int		ft_isnegative(int minus);
-
 int	ft_atoi(char *str)
 {
 	int	i;
