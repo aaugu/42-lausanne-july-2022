@@ -1,51 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/25 09:44:05 by aaugu             #+#    #+#             */
-/*   Updated: 2022/07/27 15:55:52 by aaugu            ###   ########.fr       */
+/*   Created: 2022/07/25 09:23:13 by aaugu             #+#    #+#             */
+/*   Updated: 2022/07/25 09:32:55 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
 /*
-#include <stdlib.h>
 #include <stdio.h>
 */
-void	ft_putchar(char c);
-
-void	ft_putnbr(int nb)
+int	ft_strlen(char *str)
 {
-	if (nb == -2147483648)
-	{
-		write(1, "-2147483648", 11);
-	}
-	if (nb < 0 && nb != -2147483648)
-	{
-		ft_putchar('-');
-		nb = -nb;
-	}
-	if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else if (nb >= 0 && nb < 10)
-		ft_putchar(nb + 48);
-}
+	int	i;
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
 }
 /*
 int	main(int argc, char **argv)
-{	
-	(void) argc;
-	ft_putnbr(atoi(argv[1]));
-	ft_putchar('\n');
+{
+	if (argc != 2)
+		printf("%s\n", "Error\n");
+	else
+		printf("%d\n", ft_strlen(argv[1]));
 }
 */

@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/25 09:43:23 by aaugu             #+#    #+#             */
+/*   Updated: 2022/07/27 14:15:16 by aaugu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+/*
 #include <stdlib.h>
 #include <stdio.h>
-
+*/
 int	ft_atoi(char *str)
 {
 	int	i;
@@ -26,12 +39,16 @@ int	ft_atoi(char *str)
 			result = (result * 10) + (str[i] - '0');
 		i++;
 	}
-	return (result);
+	return (result * sign);
 }
-
+/*
 int	main(void)
 {
 	char    str1[] = "  ---+--+1234ab567";
 
 	printf("%d\n", ft_atoi(str1));
 }
+*/
+/*
+Pas réussi car mis return (result); sur ligne 42.
+*/
