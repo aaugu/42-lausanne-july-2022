@@ -1,39 +1,58 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ultimate_div_mod.c                              :+:      :+:    :+:   */
+/*   ft_rev_int_tab.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/17 11:29:37 by aaugu             #+#    #+#             */
-/*   Updated: 2022/07/18 14:05:01 by aaugu            ###   ########.fr       */
+/*   Created: 2022/07/18 12:05:01 by aaugu             #+#    #+#             */
+/*   Updated: 2022/07/18 15:00:35 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
 #include <stdio.h>
 */
-void	ft_ultimate_div_mod(int *a, int *b)
+void	ft_rev_int_tab(int *tab, int size)
 {
-	int	x;
-	int	y;
+	int	i;
+	int	j;
+	int	temp;
 
-	x = *a;
-	y = *b;
-	if (y != 0)
+	i = 0;
+	j = size - 1;
+	while (i < j)
 	{
-		*a = x / y;
-		*b = x % y;
+		temp = tab[i];
+		tab[i] = tab[j];
+		tab[j] = temp;
+		i++;
+		j--;
 	}
 }
 /*
 int	main(void)
 {
-	int	a;
-	int	b;
+	int	i;
+	int	tab[5];	
 
-	a = 13;
-	b = 5;
-	ft_ultimate_div_mod(&a, &b);
-	printf("%d\n%d", a, b);
+	i = 0;
+	tab[0] = 1;
+	tab[1] = 2;
+	tab[2] = 3;
+	tab[3] = 4;
+	tab[4] = 5;
+	while (i <= 4)
+	{
+		printf("%d", tab[i]);
+		i++;
+	}
+	i = 0;
+	printf("\n");
+	ft_rev_int_tab(tab, 5);
+	while (i <= 4)
+	{
+		printf("%d", tab[i]);
+		i++;
+	}
 }
 */

@@ -1,22 +1,34 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_swap.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/17 10:57:33 by aaugu             #+#    #+#             */
+/*   Updated: 2022/07/18 14:02:54 by aaugu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+/*
 #include <stdio.h>
-
-void    ft_swap(int *a, int *b)
+*/
+void	ft_swap(int *a, int *b)
 {
-    int tmp;
+	int	tmp;
 
-    tmp = *a;
-    *a = *b;
-    *b = tmp;
+	tmp = *a;
+	*a = *b;
+	*a = tmp;
 }
-
-int main(void)
+/*
+int	main(void)
 {
-    int a;
-    int b;
+	int a;
+	int b;
 
-    a = 42;
-    b = 51;
-    ft_swap(&a, &b);
-    printf("%d\n%d", a, b);
-    return (0);
+	a = 42;
+	b = 51;
+	ft_swap(&a, &b);
+	printf("%d\n%d", a, b);
 }
+*/
