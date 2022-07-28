@@ -1,61 +1,73 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/21 10:09:42 by aaugu             #+#    #+#             */
+/*   Updated: 2022/07/22 11:07:27 by aaugu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+/*
 #include <stdio.h>
 #include <string.h>
-
+*/
 char	is_matching(char *str, char *to_find, int i)
 {
-  int j;
+	int	j;
 
-  j = 0;
-  while (to_find[j] != '\0')
-  {
-    if (to_find[j] == str[i + j])
-      j++;
-    else
-      return (0);
-  }
-  return (1);
+	j = 0;
+	while (to_find[j] != '\0')
+	{
+		if (to_find[j] == str[i + j])
+			j++;
+		else
+			return (0);
+	}
+	return (1);
 }
 
 char	*ft_strstr(char *str, char *to_find)
 {
-	int i;
+	int	i;
 
 	i = 0;
-  if (to_find[0] == '\0')
-  {
-    return (str);
-  }
-  while (str[i] != '\0')
-  {
-    if (str[i] == to_find[0])
-    {
-      if (is_matching(str, to_find, i))
-      {
-        return &str[i];
-      }
-    }
-    i++;
-  }
-  return (0);
+	if (to_find[0] == '\0')
+	{
+		return (str);
+	}
+	while (str[i] != '\0')
+	{
+		if (str[i] == to_find[0])
+		{
+			if (is_matching(str, to_find, i))
+			{
+				return (&str[i]);
+			}
+		}
+		i++;
+	}
+	return (0);
 }
-
+/*
 int	main(void)
 {
 	char	str[] = "Hello World Woohoo!";
 	char	to_find[] = "World";
-//	char	to_find1[] = "42";
+	char	to_find1[] = "42";
 	char	to_find2[] = "";
 	char	to_find3[] = "Woo";
 	char	str1[] = "";
 	char	to_find4[] = "";
 
-  printf("%s\n", strstr(str, to_find));
 	printf("%s\n", ft_strstr(str, to_find));
-/*	printf("%s\n", "-----");
-	printf("%s\n", ft_strstr(str, to_find1));
-	printf("%s\n", strstr(str, to_find1));*/
+	printf("%s\n", strstr(str, to_find));
 	printf("%s\n", "-----");
-  printf("%s\n", ft_strstr(str, to_find2));
+	printf("%s\n", ft_strstr(str, to_find1));
+	printf("%s\n", strstr(str, to_find1));
+	printf("%s\n", "-----");
+	printf("%s\n", ft_strstr(str, to_find2));
 	printf("%s\n", strstr(str, to_find2));
 	printf("%s\n", "-----");
 	printf("%s\n", ft_strstr(str, to_find3));
@@ -64,3 +76,4 @@ int	main(void)
 	printf("%s\n", ft_strstr(str1, to_find4));
 	printf("%s\n", strstr(str1, to_find4));
 }
+*/
