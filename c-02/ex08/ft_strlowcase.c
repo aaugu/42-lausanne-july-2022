@@ -1,26 +1,39 @@
-char  *ft_strupcase(char *str)
-{
-  int i;
-
-  i = 0;
-  while (str[i] != '\0')
-  {
-    if (str[i] >= 'A' && str[i] <= 'Z')
-    {
-      str[i] += 32;
-    }
-    i++;
-  }
-  return (str);
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/20 11:55:39 by aaugu             #+#    #+#             */
+/*   Updated: 2022/07/28 20:47:42 by aaugu            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include <stdio.h>
-
-int main(void)
+*/
+char	*ft_strlowcase(char *str)
 {
-  char  str1[] = "HELLO WORLD !";
-  char  str2[] = "42 ANSWERS EVERYTHING";
+	int	i;
 
-  printf("%s\n", ft_strupcase(str1));
-  printf("%s\n", ft_strupcase(str2));
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] += 32;
+		}
+		i++;
+	}
+	return (str);
 }
+/*
+int	main(void)
+{
+	char	str1[] = "HELLO WORLD !";
+	char	str2[] = "42 ANSWERS EVERYTHING";
+	
+	printf("%s\n", ft_strlowcase(str1));
+	printf("%s\n", ft_strupcase(str2));
+}
+*/

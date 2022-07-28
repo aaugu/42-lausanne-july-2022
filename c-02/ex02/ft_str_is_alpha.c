@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_is_lowercase.c                              :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 10:54:23 by aaugu             #+#    #+#             */
-/*   Updated: 2022/07/20 11:14:24 by aaugu            ###   ########.fr       */
+/*   Created: 2022/07/19 17:07:08 by aaugu             #+#    #+#             */
+/*   Updated: 2022/07/20 11:38:54 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 /*
 #include <stdio.h>
 */
-int	ft_str_is_lowercase(char *str)
+int	ft_str_is_alpha(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] < 'a' || str[i] > 'z')
+		if ((str[i] < 'a' || str[i] > 'z') && (str[i] < 'A' || str[i] > 'Z'))
 		{
 			return (0);
 		}
@@ -30,12 +30,12 @@ int	ft_str_is_lowercase(char *str)
 /*
 int	main(void)
 {
-	char  str1[] = "";
-	char  str2[] = "Hello";
-	char  str3[] = "hello";
+	char str1[] = "";
+	char str2[] = "fjkdshfjsf";
+	char str3[] = "&fjdshf*";
 
-	printf("%d\n", ft_str_is_lowercase(str1));
-	printf("%d\n", ft_str_is_lowercase(str2));
-	printf("%d\n", ft_str_is_lowercase(str3));
+	printf("%d\n", ft_str_is_alpha(str1));
+	printf("%d\n", ft_str_is_alpha(str2));
+	printf("%d\n", ft_str_is_alpha(str3));
 }
 */
