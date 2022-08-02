@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlowcase.c                                    :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/20 11:55:39 by aaugu             #+#    #+#             */
-/*   Updated: 2022/07/20 17:12:40 by aaugu            ###   ########.fr       */
+/*   Created: 2022/08/02 16:41:33 by aaugu             #+#    #+#             */
+/*   Updated: 2022/08/02 18:16:19 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-/*
-#include <stdio.h>
-*/
-char	*ft_strupcase(char *str)
-{
-	int	i;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] >= 'A' && str[i] <= 'Z')
-		{
-			str[i] += 32;
-		}
-		i++;
-	}
-	return (str);
-}
-/*
-int	main(void)
-{
-	char	str1[] = "HELLO WORLD !";
-	char	str2[] = "42 ANSWERS EVERYTHING";
-	
-	printf("%s\n", ft_strupcase(str1));
-	printf("%s\n", ft_strupcase(str2));
-}
-*/
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
+
+# define EVEN ft_is_even
+# define TRUE 1
+# define FALSE 0
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define SUCCESS 1
+
+#endif

@@ -6,7 +6,7 @@
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:09:09 by aaugu             #+#    #+#             */
-/*   Updated: 2022/08/01 13:11:29 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/08/02 13:48:55 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ int	ft_strlen(char *str)
 	}
 	return (i);
 }
-
+/*
 int	main(int argc, char **argv)
 {
 	char	*tab;
@@ -56,3 +56,4 @@ int	main(int argc, char **argv)
 	printf("%s", tab);
 	free(tab);
 }
+*/

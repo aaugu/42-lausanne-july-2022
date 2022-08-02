@@ -6,7 +6,7 @@
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 09:43:23 by aaugu             #+#    #+#             */
-/*   Updated: 2022/07/27 14:15:16 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/07/29 14:58:39 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,4 @@ int	main(void)
 	printf("%d\n", ft_atoi(str1));
 }
 */
-/*
-Pas réussi car mis return (result); sur ligne 42.
-*/
+// Pas réussi car mis "return (result);" sur ligne 42. Corrigé.

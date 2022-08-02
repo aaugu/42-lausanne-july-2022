@@ -6,7 +6,7 @@
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:09:37 by aaugu             #+#    #+#             */
-/*   Updated: 2022/08/01 20:34:37 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/08/02 16:21:53 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int	*ft_range(int min, int max)
 	int	i;
 
 	i = 0;
-	if (min > max)
+	if (min >= max)
 	{
-		tab = NULL;
+		tab = 0;
 		return (tab);
 	}
 	size = max - min;
@@ -45,10 +45,15 @@ int	main(int argc, char **argv)
 	(void) argc;
 	i = 0;
 	tab = ft_range(atoi(argv[1]), atoi(argv[2]));
-	while (tab[i] < atoi(argv[2]))
+	if (tab == NULL)
+		printf("Pointer is NULL");
+	else
 	{
-		printf("%d\n", tab[i]);
-		i++;
+		while (tab[i] < atoi(argv[2]))
+		{
+			printf("%d\n", tab[i]);
+			i++;
+		}
 	}
 	free(tab);
 }

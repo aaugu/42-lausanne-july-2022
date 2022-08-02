@@ -6,7 +6,7 @@
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/29 11:50:41 by aaugu             #+#    #+#             */
-/*   Updated: 2022/08/01 22:34:52 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/08/02 19:10:34 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ int	ft_strlen(char *str)
 int	ft_strs_len(char **strs, int size)
 {
 	int		i;
-	int 	j;
+	int		j;
 	int		count;
 	char	*str;
 
@@ -74,10 +74,10 @@ int	ft_strs_len(char **strs, int size)
 
 char	*ft_concat(char **strs, char *sep, char *strcat, int size)
 {
-	int	i;
-	int	j;
-	int	k;
-	char *str;
+	int		i;
+	int		j;
+	int		k;
+	char	*str;
 
 	i = 0;
 	k = 0;
@@ -98,22 +98,23 @@ char	*ft_concat(char **strs, char *sep, char *strcat, int size)
 		}
 		i++;
 	}
+	// oubli de mettre \0 à la fin
+	// strcat[k] = '\0';
 	return (strcat);
 }
-
+/*
 int	main(void)
 {
 	char	*strs[3];
 	char	sep[2] = " ";
 	int		size = 3;
-
-	char *str0 = "Hello";
-	char *str1 = "world";
-	char *str2 = "!";
+	char	*str0 = "Hello";
+	char	*str1 = "world";
+	char    *str2 = "!";
 
 	strs[0] = str0;
 	strs[1] = str1;
 	strs[2] = str2;
-
 	printf("%s\n", ft_strjoin(size, strs, sep));
 }
+*/
