@@ -6,7 +6,17 @@
 /*   By: aaugu <marvin@42lausanne.ch>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 16:41:39 by aaugu             #+#    #+#             */
-/*   Updated: 2022/08/02 16:41:41 by aaugu            ###   ########.fr       */
+/*   Updated: 2022/08/04 09:59:47 by aaugu            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#ifndef FT_POINT_H
+# define FT_POINT_H
+
+typedef struct s_point
+{
+	int	x;
+	int	y;
+}	t_point;
+
+#endif
